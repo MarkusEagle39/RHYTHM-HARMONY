@@ -1,5 +1,7 @@
 # RHYTHM HARMONY — protótipo de jogo de ritmo
 
+🎮 **[Jogue agora](https://markuseagle39.github.io/RHYTHM-HARMONY/)**
+
 Protótipo local para navegador, com menu lateral, identidade escura em dourado e ciano, catálogo, pista de quatro colunas e telas de pausa e resultado. Não exige dependências de terceiros nem acesso à internet; não tem login, backend ou banco de dados.
 
 ## Como abrir
