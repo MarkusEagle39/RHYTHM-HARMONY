@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090b13">
+    <title>RHYTHM HARMONY — Protótipo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="grain"></div>
+
+    <header class="topbar">
+      <a class="wordmark" href="#home">
+        <span class="mark">R</span>
+        RHYTHM<span class="slash">HARMONY</span>
+      </a>
+
+      <div class="top-right">
+        <span class="live-dot"></span>
+        PROTÓTIPO LOCAL
+        <button class="icon-button" id="openSettings" aria-label="Configurações">⚙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="screen active" id="home">
+        <div class="hero">
+          <nav class="home-nav">
+            <a class="home-brand" href="#home">
+              <span>RHYTHM<br>HARMONY</span>
+              <small>BEYOND THE BEAT</small>
+            </a>
+            <button class="home-link active" id="startSelect"><b>▶</b> JOGAR</button>
+            <button class="home-link" id="goMusic"><b>♪</b> MÚSICAS</button>
+            <button class="home-link" id="homeSettings"><b>⚙</b> CONFIGURAÇÕES</button>
+            <button class="home-link" id="creditsButton"><b>✳</b> CRÉDITOS</button>
+            <span class="home-tagline">MÚSICA CONECTA TUDO</span>
+          </nav>
+
+          <div class="hero-copy">
+            <p class="eyebrow">RHYTHM SYSTEM <span>— 001</span></p>
+            <h1>SINTA O<br><em>COMPASSO.</em></h1>
+            <p class="intro">
+              Encontre o ritmo. Acerte as notas.<br>
+              Entre no seu próprio fluxo.
+            </p>
+            <div class="micro">4K / KEY MODE <i>•</i> BUILD 0.1.0</div>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <img class="hero-image" src="assets/home-hero.jpg" alt="">
+            <span class="art-label label-a">SOUND<br>IS MOTION</span>
+            <span class="art-label label-b">120 BPM<br>READY</span>
+          </div>
+        </div>
+
+        <div class="home-footer">
+          <span>01 <b>/</b> INTRODUÇÃO</span>
+          <span>PRESSIONE <kbd>ENTER</kbd> PARA COMEÇAR</span>
+          <span>© RHYTHM HARMONY — SIMULAÇÃO</span>
+        </div>
+      </section>
+
+      <section class="screen" id="select">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">SELEÇÃO DE MÚSICA <span>— 02</span></p>
+            <h2>ESCOLHA SUA <em>FAIXA.</em></h2>
+          </div>
+          <button class="text-button" data-screen="home">← MENU INICIAL</button>
+        </div>
+
+        <div class="library">
+          <div class="track-list">
+            <button class="track-card selected" data-track="beethoven">
+              <span class="track-index">01</span>
+              <span class="cover"><img src="assets/music/beethoven-fur-elise.jpg" alt="" aria-hidden="true"></span>
+              <span class="track-info">
+                <span class="tag">BEETHOVEN / 3 NÍVEIS</span>
+                <strong>Für Elise</strong>
+                <small>Ludwig van Beethoven <b>·</b> Demo sintetizada</small>
+              </span>
+              <span class="track-bpm">120 <small>BPM</small></span>
+              <span class="chevron">↗</span>
+            </button>
+
+            <button class="track-card" data-track="atraente">
+              <span class="track-index">02</span>
+              <span class="cover"><img src="assets/music/atraente.jpg" alt="" aria-hidden="true"></span>
+              <span class="track-info"><span class="tag">CHIQUINHA GONZAGA</span><strong>Atraente</strong><small>Demo sintetizada</small></span>
+              <span class="track-bpm">120 <small>BPM</small></span>
+              <span class="chevron">↗</span>
+            </button>
+
+            <button class="track-card" data-track="brejeiro">
+              <span class="track-index">03</span>
+              <span class="cover"><img src="assets/music/brejeiro.jpg" alt="" aria-hidden="true"></span>
+              <span class="track-info"><span class="tag">ERNESTO NAZARETH</span><strong>Brejeiro</strong><small>Demo sintetizada</small></span>
+              <span class="track-bpm">120 <small>BPM</small></span>
+              <span class="chevron">↗</span>
+            </button>
+
+            <button class="track-card" data-track="odeon">
+              <span class="track-index">04</span>
+              <span class="cover"><img src="assets/music/odeon.jpg" alt="" aria-hidden="true"></span>
+              <span class="track-info"><span class="tag">ERNESTO NAZARETH</span><strong>Odeon</strong><small>Demo sintetizada</small></span>
+              <span class="track-bpm">120 <small>BPM</small></span>
+              <span class="chevron">↗</span>
+            </button>
+          </div>
+
+          <aside class="difficulty">
+            <p class="eyebrow">DIFICULDADE</p>
+            <div class="diff-options">
+              <button class="diff active" data-diff="EASY">
+                <span>01</span><b>EASY</b><i>●●○○</i>
+              </button>
+              <button class="diff" data-diff="MEDIUM">
+                <span>02</span><b>MEDIUM</b><i>●●●○</i>
+              </button>
+              <button class="diff" data-diff="HARD">
+                <span>03</span><b>HARD</b><i>●●●●</i>
+              </button>
+            </div>
+
+            <div class="chart-meta">
+              <span>CHART</span><b id="chartLevel">LV. 03</b>
+              <span>BPM</span><b>120</b>
+              <span>NOTAS</span><b id="noteCount">98</b>
+              <span>DURAÇÃO</span><b>≤ 1:00</b>
+            </div>
+
+            <button class="primary play-button" id="playNow">
+              INICIAR JOGO <span>▶</span>
+            </button>
+            <button class="text-button back-link" data-screen="home">← VOLTAR</button>
+          </aside>
+
+          <div class="selection-art">
+            <img id="selectionArtImage" src="assets/music/beethoven-fur-elise.jpg" alt="Capa de Für Elise, de Ludwig van Beethoven">
+            <div class="art-caption" id="artCaption">FÜR ELISE<br>LUDWIG VAN BEETHOVEN</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen game-screen" id="game">
+        <div class="game-top">
+          <div>
+            <p class="eyebrow">FAIXA 01 <span id="activeTrackName">— FÜR ELISE</span></p>
+            <strong class="game-title" id="gameArtist">LUDWIG VAN BEETHOVEN</strong>
+          </div>
+
+          <div class="hud">
+            <div><small>SCORE</small><b id="score">0000000</b></div>
+            <div><small>COMBO</small><b id="combo">000</b></div>
+            <button class="pause" id="pauseButton" aria-label="Pausar">Ⅱ</button>
+          </div>
+        </div>
+
+        <div class="playfield-wrap">
+          <div class="side-readout">
+            <span>4K MODE</span>
+            <b id="measure">01—01</b>
+            <span>120 BPM</span>
+          </div>
+
+          <div class="playfield" id="playfield">
+            <div class="lane-glow"></div>
+            <div class="lane-bg"></div>
+            <div class="hit-line"></div>
+            <div class="judgement" id="judgement">READY?</div>
+
+            <div class="lanes" id="lanes">
+              <div class="lane" data-lane="0">
+                <button class="keycap touch-key" type="button" data-lane="0" aria-label="Acionar faixa D">D</button>
+                <span class="lane-name">D</span>
+              </div>
+              <div class="lane" data-lane="1">
+                <button class="keycap touch-key" type="button" data-lane="1" aria-label="Acionar faixa F">F</button>
+                <span class="lane-name">F</span>
+              </div>
+              <div class="lane" data-lane="2">
+                <button class="keycap touch-key" type="button" data-lane="2" aria-label="Acionar faixa J">J</button>
+                <span class="lane-name">J</span>
+              </div>
+              <div class="lane" data-lane="3">
+                <button class="keycap touch-key" type="button" data-lane="3" aria-label="Acionar faixa K">K</button>
+                <span class="lane-name">K</span>
+              </div>
+            </div>
+
+            <div class="pause-overlay" id="pauseOverlay">
+              <div>
+                <p class="eyebrow">PAUSADO</p>
+                <button class="primary" id="resumeButton">▶ &nbsp; CONTINUAR</button>
+                <button class="pause-choice" id="restartButton">⟳ &nbsp; REINICIAR</button>
+                <button class="pause-choice" id="pauseSettings">⚙ &nbsp; CONFIGURAÇÕES</button>
+                <button class="pause-choice" id="quitButton">↪ &nbsp; SAIR DA MÚSICA</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-readout right">
+            <span>SCORE</span>
+            <b id="sideScore">000000</b>
+            <div
+              class="fever-bar"
+              id="feverBar"
+              role="progressbar"
+              aria-label="Carga do Fever"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="50"
+            >
+              <i id="feverFill"></i>
+              <span id="feverLabel">FEVER 50%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-bottom">
+          <span>TECLAS <b>D</b><b>F</b><b>J</b><b>K</b></span>
+          <span>APERTE NO TEMPO DA LINHA</span>
+          <button class="text-button" id="skipButton">PULAR FAIXA ↗</button>
+        </div>
+      </section>
+
+      <section class="screen" id="result">
+        <div class="result-panel">
+          <p class="eyebrow" id="resultEyebrow">SESSÃO CONCLUÍDA <span>— 04</span></p>
+          <h2 id="resultTitle">BELO <em>RITMO.</em></h2>
+          <p class="result-track" id="resultTrackName">FÜR ELISE · LUDWIG VAN BEETHOVEN</p>
+
+          <div class="result-stats">
+            <div><small>SCORE</small><b id="finalScore">0000000</b></div>
+            <div><small>MAX COMBO</small><b id="maxCombo">000</b></div>
+          </div>
+
+          <div class="judge-counts">
+            <span>PERFECT <b id="perfectCount">0</b></span>
+            <span>GREAT <b id="greatCount">0</b></span>
+            <span>GOOD <b id="goodCount">0</b></span>
+            <span>MISS <b id="missCount">0</b></span>
+          </div>
+
+          <button class="primary" id="retryButton">JOGAR DE NOVO <span>↗</span></button>
+          <button class="text-button" data-screen="select">ESCOLHER DIFICULDADE</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="settingsModal">
+      <div class="modal-card">
+        <button class="close" id="closeSettings">×</button>
+        <p class="eyebrow">AJUSTES DO SISTEMA</p>
+        <h2>CONFIGURAÇÕES</h2>
+
+        <label class="setting">
+          Volume da música
+          <input id="volume" type="range" min="0" max="100" value="34">
+          <b id="volumeLabel">34%</b>
+        </label>
+        <label class="setting">
+          Velocidade das notas
+          <select id="speed">
+            <option value="1">1.0× — Padrão</option>
+            <option value="1.25">1.25×</option>
+            <option value="1.5">1.5×</option>
+          </select>
+        </label>
+        <label class="setting">
+          Efeitos visuais
+          <select id="effects">
+            <option value="on">Ativados</option>
+            <option value="off">Reduzidos</option>
+          </select>
+        </label>
+        <label class="setting">
+          Mecânica Fever
+          <select id="feverToggle">
+            <option value="on">Ativada</option>
+            <option value="off">Desativada</option>
+          </select>
+        </label>
+        <p class="setting-note">Preferências salvas apenas nesta sessão.</p>
+      </div>
+    </div>
+
+    <script src="game.bundle.js"></script>
+  </body>
+</html>
